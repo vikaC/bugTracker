@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BugTrackerSpring:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.spring.bug.tracker-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="BugTrackerSpring:war exploded" />
+    </root>
+  </artifact>
+</component>
