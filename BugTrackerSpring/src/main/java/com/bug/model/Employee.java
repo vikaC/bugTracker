@@ -6,10 +6,10 @@ import javax.persistence.*;
 @Table(name = "employee")
 public class Employee {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name = "login" ,nullable = false)
+    @Column(name = "login" ,nullable = false, unique = true)
     private String login;
     @Column(name = "password" ,nullable = false)
     private String password;

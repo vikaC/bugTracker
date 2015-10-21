@@ -12,7 +12,7 @@ $(document).ready(function () {
             var mapping = $.fn.getUrl(parameterName, url);
             $.get(mapping)
                 .done(function (data) {
-                    alert("Success");
+                    location.replace("project");
                 })
                 .fail(function (data) {
                     $.fn.signInError("Login or password don't match!");
@@ -47,10 +47,11 @@ $(document).ready(function () {
                 var mapping = $.fn.getUrl(parameterName, url);
                 $.get(mapping)
                     .done(function (data) {
-                        alert("Success");
+                        location.replace("project");
                     })
                     .fail(function (data) {
-                        $.fn.registrationError("Current login used by another user");
+                        //TODO find method to work with JavaException
+                        $.fn.registrationError("Registration wasn't success");
                     });
             } else {
                 $.fn.registrationError("Passwords don't match!");
