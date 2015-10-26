@@ -15,9 +15,6 @@ public class EmployeeValidatorImpl implements EmployeeValidation {
         return (password.length() > 5);
     }
 
-    public boolean isLoginPatternMatch(String login) {
-        return (login.length() > 5);
-    }
 
     public boolean validate(String login, String password, String confirmedPassword, String name, String surname) {
         if (isEmpty(login) | isEmpty(password) | isEmpty(confirmedPassword) |
@@ -30,9 +27,6 @@ public class EmployeeValidatorImpl implements EmployeeValidation {
         if (!isPasswordPatternMatch(password)) {
             return false;
         }
-        if (!isLoginPatternMatch(login)) {
-            return false;
-        }
         return true;
     }
 
@@ -41,9 +35,6 @@ public class EmployeeValidatorImpl implements EmployeeValidation {
             return false;
         }
         if (!isPasswordPatternMatch(password)) {
-            return false;
-        }
-        if (!isLoginPatternMatch(login)) {
             return false;
         }
         return true;

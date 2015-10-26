@@ -47,7 +47,7 @@ $(document).ready(function () {
                 var mapping = $.fn.getUrl(parameterName, url);
                 $.get(mapping)
                     .done(function (data) {
-                        location.replace("project");
+                        location.replace("/project");
                     })
                     .fail(function (data) {
                         //TODO find method to work with JavaException

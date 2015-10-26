@@ -9,8 +9,6 @@ public interface EmployeeValidation {
 
     boolean isPasswordPatternMatch(String password);
 
-    boolean isLoginPatternMatch(String login);
-
     boolean validate(String login, String password, String confirmedPassword, String name, String surname);
 
     boolean validate(String login,String password);

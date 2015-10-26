@@ -58,13 +58,15 @@
                         <strong>project</strong>
                     </small>
                 </h2>
-                <label for="project_name">Login:</label>
+                <div class="alert alert-danger" id="error_during_add_in" role="alert"></div>
+                <label for="project_name">Project name:</label>
                 <input type="text" class="form-control" id="project_name">
                 <label for="project_start_date">Start date:</label>
                 <input type="text" class="form-control datepicker" id="project_start_date">
                 <label for="project_due_date">Due date:</label>
                 <input type="text" class="form-control datepicker" id="project_due_date">
-
+                <button class="btn btn-primary" id="add_button">Add</button>
+                <button class="btn btn-primary" id="cancel_button">Cancel</button>
             </div>
         </div>
     </div>
