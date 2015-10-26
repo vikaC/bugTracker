@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6542d9-a425-4c24-82b9-ba5829744c6e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bug/exeption/ProjectException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bug/validation/ProjectValidation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bug/validation/ProjectValidationImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bug/validation/EmployeeValidation.java" afterPath="$PROJECT_DIR$/src/main/java/com/bug/validation/EmployeeValidation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bug/validation/EmployeeValidatorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bug/validation/EmployeeValidatorImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_2_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_1_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_3_1_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BugTrackerSpring.iml" afterPath="$PROJECT_DIR$/BugTrackerSpring.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/BugTrackerSpring_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/BugTrackerSpring_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bug/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bug/controller/ProjectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProject.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProject.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.spring.bug.tracker-1.0-SNAPSHOT/WEB-INF/views/addProject.jsp" afterPath="$PROJECT_DIR$/target/com.spring.bug.tracker-1.0-SNAPSHOT/WEB-INF/views/addProject.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/project.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.spring.bug.tracker-1.0-SNAPSHOT/static/js/project.js" afterPath="$PROJECT_DIR$/target/com.spring.bug.tracker-1.0-SNAPSHOT/static/js/project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/registration.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/registration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.spring.bug.tracker-1.0-SNAPSHOT/static/js/registration.js" afterPath="$PROJECT_DIR$/target/com.spring.bug.tracker-1.0-SNAPSHOT/static/js/registration.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BugTrackerSpring.iws" />
@@ -44,7 +40,7 @@
       <file leaf-file-name="addProject.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProject.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8333335" vertical-offset="802" max-vertical-offset="1485">
+            <state vertical-scroll-proportion="-41.25" vertical-offset="0" max-vertical-offset="1485">
               <caret line="66" column="87" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="87" />
               <folding />
             </state>
@@ -54,8 +50,18 @@
       <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bug/controller/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54003406" vertical-offset="283" max-vertical-offset="870">
-              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.770017" vertical-offset="13" max-vertical-offset="825">
+              <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="1710">
+              <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -95,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bug/configuration/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/WEB-INF/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/static/d.css" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bug/configuration/HibernateConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/bug/dao/EmploeeDao.java" />
@@ -122,8 +127,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bug/exeption/ProjectException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bug/validation/ProjectValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bug/validation/ProjectValidationImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bug/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/project.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bug/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -834,12 +840,12 @@
       <workItem from="1445369265077" duration="4000" />
       <workItem from="1445369703766" duration="5674000" />
       <workItem from="1445404944767" duration="8978000" />
-      <workItem from="1445887757352" duration="4119000" />
+      <workItem from="1445887757352" duration="4599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18776000" />
+    <option name="totallyTimeSpent" value="19256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="707" extended-state="6" />
@@ -1035,14 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1271,14 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProject.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8333335" vertical-offset="802" max-vertical-offset="1485">
-          <caret line="66" column="87" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/project.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="1230">
@@ -1295,10 +1285,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addProject.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-41.25" vertical-offset="0" max-vertical-offset="1485">
+          <caret line="66" column="87" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="1710">
+          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bug/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54003406" vertical-offset="283" max-vertical-offset="870">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.770017" vertical-offset="13" max-vertical-offset="825">
+          <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
           <folding />
         </state>
       </provider>

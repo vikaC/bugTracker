@@ -44,9 +44,6 @@ public class ProjectController {
         try {
             start = LocalDate.parse(startDate, formatter);
             end = LocalDate.parse(endDate, formatter);
-            System.out.println("startDate " + start.toString());
-            System.out.println("endDate " + end.toString());
-            System.out.println("project name " + name);
         } catch (Exception e) {
             throw new ProjectException("Wrong date format");
         }
