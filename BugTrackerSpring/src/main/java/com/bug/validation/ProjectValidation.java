@@ -10,4 +10,8 @@ public interface ProjectValidation {
     boolean isValidDates(LocalDate start, LocalDate end);
 
     boolean isNameValid(String name);
+
+    boolean isDateValid(String date);
+
+    boolean validate(String startDate,String endDate, String name);
 }

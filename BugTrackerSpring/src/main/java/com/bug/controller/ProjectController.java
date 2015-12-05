@@ -22,6 +22,9 @@ public class ProjectController {
 
     @Autowired
     ProjectService service;
+    @Autowired
+    ProjectValidation validator;
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/dd/yyyy");
 
     @RequestMapping(value = "/project")
     public String getProjectList(ModelMap map) {
@@ -31,7 +34,6 @@ public class ProjectController {
 
     @RequestMapping(value = "/project/add")
     public String addProject() {
-        System.out.println("adding new project");
         return "addProject";
     }
 
@@ -39,14 +41,10 @@ public class ProjectController {
     @ResponseBody
     public String addNewProject(@RequestParam("name") String name, @RequestParam("start") String startDate,
                                 @RequestParam("end") String endDate) throws ProjectException {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/dd/yyyy");
-        LocalDate start, end;
-        try {
-            start = LocalDate.parse(startDate, formatter);
-            end = LocalDate.parse(endDate, formatter);
-        } catch (Exception e) {
-            throw new ProjectException("Wrong date format");
-        }
+        if (!validator.validate(endDate, startDate, name))
+            throw new ProjectException("Validation exception");
+        LocalDate start = LocalDate.parse(startDate, formatter);
+        LocalDate end = LocalDate.parse(endDate, formatter);
         ProjectValidation validator = new ProjectValidationImpl();
         if (validator.isValidDates(start, end)) {
             if (validator.isNameValid(name)) {

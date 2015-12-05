@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/")
 public class EmployeeController {
 
+
+    @Autowired
+    EmployeeValidation validator;
     @Autowired
     EmployeeService service;
 
@@ -32,8 +35,6 @@ public class EmployeeController {
     public String isSignInSuccess(@RequestParam String login, @RequestParam String password,
                                   @RequestParam String confirmedPassword, @RequestParam String name,
                                   @RequestParam String surname, @RequestParam String position) throws EmployeeException {
-        EmployeeValidation validator = new EmployeeValidatorImpl();
-        System.out.println(login + " " + password + " " + confirmedPassword + " " + name + " " + surname);
         if (validator.validate(login, password, confirmedPassword, name, surname)) {
             Employee entity = new Employee(login, password, name, surname, position);
             service.insert(entity);
@@ -46,8 +47,6 @@ public class EmployeeController {
     @ResponseBody
     @RequestMapping(value = "/index/log")
     public String isLogInSuccess(@RequestParam String login, @RequestParam String password) throws EmployeeException {
-        EmployeeValidation validator = new EmployeeValidatorImpl();
-        System.out.println(login+" "+password);
         if (validator.validate(login, password)) {
             Employee entity = service.findByLogin(login);
             if (entity != null) {

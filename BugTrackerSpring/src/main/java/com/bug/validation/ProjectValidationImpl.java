@@ -1,10 +1,11 @@
 package com.bug.validation;
 
-import java.time.LocalDate;
+import org.springframework.stereotype.Component;
 
-/**
- * Created by vita on 10/26/15.
- */
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+@Component
 public class ProjectValidationImpl implements ProjectValidation {
 
     @Override
@@ -21,5 +22,22 @@ public class ProjectValidationImpl implements ProjectValidation {
     @Override
     public boolean isNameValid(String name) {
         return name.length() > 4;
+    }
+
+    @Override
+    public boolean isDateValid(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/dd/yyyy");
+
+        try {
+            LocalDate.parse(date, formatter);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean validate(String startDate, String endDate, String name) {
+        return isDateValid(startDate) && isDateValid(endDate) && isNameValid(name);
     }
 }

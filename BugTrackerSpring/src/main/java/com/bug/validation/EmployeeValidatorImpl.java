@@ -1,6 +1,8 @@
 package com.bug.validation;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmployeeValidatorImpl implements EmployeeValidation {
 
     public boolean isEmpty(String entity) {
