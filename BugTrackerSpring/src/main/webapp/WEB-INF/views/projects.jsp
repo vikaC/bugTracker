@@ -9,8 +9,8 @@
     <spring:url value="/static/css/bootstrap.min.css" var="bootstrapCss"/>
     <spring:url value="/static/css/jquery-ui.css" var="jqueryUI"/>
     <link href="${bootstrapCss}" rel="stylesheet"/>
-    <link href="${coreCss}" rel="stylesheet"/>
     <link href="${jqueryUI}" rel="stylesheet"/>
+    <link href="${coreCss}" rel="stylesheet"/>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
@@ -38,7 +38,7 @@
                     <a id="log_out">Log out</a>
                 </li>
                 <li>
-                    <a id="list_of_project">List of projects</a>
+                    <a data-toggle="modal" data-target="#add_new_project">Add new project</a>
                 </li>
             </ul>
         </div>
@@ -51,22 +51,34 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12 text-center">
-                <h1 class="brand-name">Add</h1>
+                <h1 class="brand-name">List</h1>
                 <hr class="tagline-divider">
                 <h2>
-                    <small>new
-                        <strong>project</strong>
+                    <small>of
+                        <strong>projects</strong>
                     </small>
                 </h2>
-                <div class="alert alert-danger" id="error_during_add_in" role="alert"></div>
-                <label for="project_name">Project name:</label>
-                <input type="text" class="form-control" id="project_name">
-                <label for="project_start_date">Start date:</label>
-                <input type="text" class="form-control datepicker" id="project_start_date">
-                <label for="project_due_date">Due date:</label>
-                <input type="text" class="form-control datepicker" id="project_due_date">
-                <button class="btn btn-primary" id="add_button">Add</button>
-                <button class="btn btn-primary" id="cancel_button">Cancel</button>
+                <div>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Project name</th>
+                            <th>Start date</th>
+                            <th>Due date</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <c:forEach items="${projects}" var="project">
+                            <tr>
+                               <td>${project.name}</td>
+                                <td>${project.startDate}</td>
+                                <td>${project.dueDate}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -78,10 +90,10 @@
 <spring:url value="/static/js/jquery-ui.js" var="jqueryUIJs"/>
 
 <script src="${jquery}"></script>
-<script src="${jqueryUIJs}"></script>
 <script src="${coreJs}"></script>
 <script src="${bootstrapJsMin}"></script>
 <script src="${bootstrapJs}"></script>
+<script src="${jqueryUIJs}"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({
@@ -89,6 +101,34 @@
     })
 </script>
 
+
+<div id="add_new_project" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add new project</h4>
+            </div>
+            <div class="alert alert-danger" id="error_during_add_in" role="alert">
+            </div>
+            <div class="modal-body">
+                <label for="project_name">Project name:</label>
+                <input type="text" class="form-control" id="project_name">
+                <label for="project_start_date">Start date:</label>
+                <input type="text" class="form-control datepicker" id="project_start_date">
+                <label for="project_due_date">Due date:</label>
+                <input type="text" class="form-control datepicker" id="project_due_date">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="add_button">Add</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>

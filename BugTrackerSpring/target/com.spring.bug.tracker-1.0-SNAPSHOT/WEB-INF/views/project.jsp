@@ -9,8 +9,8 @@
     <spring:url value="/static/css/bootstrap.min.css" var="bootstrapCss"/>
     <spring:url value="/static/css/jquery-ui.css" var="jqueryUI"/>
     <link href="${bootstrapCss}" rel="stylesheet"/>
-    <link href="${jqueryUI}" rel="stylesheet"/>
     <link href="${coreCss}" rel="stylesheet"/>
+    <link href="${jqueryUI}" rel="stylesheet"/>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
@@ -38,7 +38,7 @@
                     <a id="log_out">Log out</a>
                 </li>
                 <li>
-                    <a id="new_project">Add new project</a>
+                    <a id="list_of_project">List of projects</a>
                 </li>
             </ul>
         </div>
@@ -51,33 +51,9 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12 text-center">
-                <h1 class="brand-name">List</h1>
-                <hr class="tagline-divider">
-                <h2>
-                    <small>of
-                        <strong>projects</strong>
-                    </small>
-                </h2>
-                <div>
-                    <table class="table table-hover">
-                        <thead>
-                        <tr>
-                            <th>Project name</th>
-                            <th>Start date</th>
-                            <th>Due date</th>
-                        </tr>
-                        </thead>
-                        <c:forEach items="projects" var="project">
-                        <tbody>
-                        <tr>
-                                <%--<td>${project.name}</td>--%>
-                                <%--<td>${project.startDate}</td>--%>
-                                <%--<td>${project.dueDate}</td>--%>
-                        </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
-                </div>
+                ${project.name}
+                ${project.startDate}
+                ${project.dueDate}
             </div>
         </div>
     </div>
@@ -86,8 +62,10 @@
 <spring:url value="/static/js/project.js" var="coreJs"/>
 <spring:url value="/static/js/bootstrap.min.js" var="bootstrapJsMin"/>
 <spring:url value="/static/js/bootstrap.js" var="bootstrapJs"/>
+<spring:url value="/static/js/jquery-ui.js" var="jqueryUIJs"/>
 
 <script src="${jquery}"></script>
+<script src="${jqueryUIJs}"></script>
 <script src="${coreJs}"></script>
 <script src="${bootstrapJsMin}"></script>
 <script src="${bootstrapJs}"></script>

@@ -13,7 +13,7 @@ import java.util.List;
 public class ProjectServiceImpl implements ProjectService {
 
     @Autowired
-    private ProjectDao dao;
+    public ProjectDao dao;
 
     @Override
     public Project findById(int id) {

@@ -8,12 +8,11 @@ import com.bug.validation.ProjectValidation;
 import com.bug.validation.ProjectValidationImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -27,14 +26,9 @@ public class ProjectController {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/dd/yyyy");
 
     @RequestMapping(value = "/project")
-    public String getProjectList(ModelMap map) {
-        map.addAttribute("projects", service.findAll());
-        return "project";
-    }
-
-    @RequestMapping(value = "/project/add")
-    public String addProject() {
-        return "addProject";
+    public String getProjectList(ModelAndView map) {
+        map.addObject("projects", service.findAll());
+        return "projects";
     }
 
     @RequestMapping(value = "project/add/new")

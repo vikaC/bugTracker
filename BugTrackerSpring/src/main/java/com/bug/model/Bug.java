@@ -1,6 +1,8 @@
 package com.bug.model;
 
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -13,14 +15,19 @@ public class Bug {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int bugId;
-    @Column(name = "name" , nullable = false)
 
+    @Column(name = "name", nullable = false)
     private String name;
+
     @Column(name = "description", nullable = false)
     private String description;
+
     @Column(name = "creation_date", nullable = false)
+    @Type(type = "com.bug.model.LocalDateHibernateUserType")
     private LocalDate creationDate;
+
     @Column(name = "due_date")
+    @Type(type = "com.bug.model.LocalDateHibernateUserType")
     private LocalDate dueDate;
 
     public Bug() {
@@ -31,12 +38,6 @@ public class Bug {
         this.description = description;
         this.creationDate = creationDate;
         this.dueDate = dueDate;
-    }
-
-    public Bug(String name, String description, LocalDate creationDate) {
-        this.name = name;
-        this.description = description;
-        this.creationDate = creationDate;
     }
 
     public int getBugId() {

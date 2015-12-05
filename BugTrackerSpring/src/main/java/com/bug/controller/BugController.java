@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Controller
@@ -25,18 +24,18 @@ public class BugController {
     private final static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm/dd/yyyy");
 
     @RequestMapping(value = "/bugs")
-    private String getBugs(Model model) {
+    public String getBugs(Model model) {
         model.addAttribute("bugs", service.findAll());
         return "bugs";
     }
 
     @RequestMapping(value = "/bugs/get")
-    private String getBugById(@RequestParam(name = "id") int id, Model model) {
+    public String getBugById(@RequestParam(name = "id") int id, Model model) {
         model.addAttribute("bug", service.findById(id));
         return "bug";
     }
 
-    @RequestMapping(value = "/bugs/add/full")
+  /*  @RequestMapping(value = "/bugs/add/full")
     private String addBug(@RequestParam(name = "name") String name, @RequestParam(name = "description") String description,
                           @RequestParam(name = "creationDate") String creationDate,
                           @RequestParam(name = "dueDate") String dueDate) throws BugException {
@@ -50,7 +49,7 @@ public class BugController {
         return "success";
     }
 
-    @RequestMapping(value = "/bugs/add")
+    /*@RequestMapping(value = "/bugs/add")
     private String addBug(@RequestParam(name = "name") String name, @RequestParam(name = "description") String description,
                           @RequestParam(name = "creationDate") String creationDate) throws BugException {
         if (!validator.validate(name, description, creationDate))
@@ -88,7 +87,7 @@ public class BugController {
         return "success";
     }
 
-
+*/
 
 
 }

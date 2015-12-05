@@ -10,12 +10,12 @@ import java.util.List;
 @Repository("bugDao")
 public class BugDaoImpl extends AbstractDao<Integer,Bug> implements BugDao {
 
-    public void insert(Bug employee) {
-        persist(employee);
+    public void insert(Bug bug) {
+        persist(bug);
     }
 
-    public void delete(Bug employee) {
-        delete(employee);
+    public void delete(Bug bug) {
+        delete(bug);
     }
 
 

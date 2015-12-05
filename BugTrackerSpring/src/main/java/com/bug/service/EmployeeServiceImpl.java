@@ -14,7 +14,7 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
-    private EmployeeDao dao;
+    public EmployeeDao dao;
 
     @Override
     public boolean isLoginPasswordMatch(String login, String password) {

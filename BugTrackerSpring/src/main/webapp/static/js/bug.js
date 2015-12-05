@@ -10,20 +10,6 @@ $(document).ready(function () {
         location.replace("/index");
     });
 
-
-
-    $("#bugs_list").click(function () {
-        location.replace("/bugs");
-    });
-
-    $("#project_name").focus(function () {
-        $.fn.hideMessage("slow");
-    });
-
-    $.fn.hideMessage = function (speed) {
-        $("#error_during_add_in").hide(speed);
-    }
-
     $.fn.isNotEmpty = function (param) {
         if (param.length > 0)
             return true;

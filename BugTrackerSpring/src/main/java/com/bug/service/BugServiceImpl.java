@@ -14,7 +14,7 @@ import java.util.List;
 public class BugServiceImpl implements BugService {
 
     @Autowired
-    private BugDao dao;
+    public BugDao dao;
 
     @Override
     public Bug findById(int id) {

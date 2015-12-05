@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(function () {
         $(".datepicker").datepicker({
             minDate: '0'
@@ -10,17 +11,12 @@ $(document).ready(function () {
         location.replace("/index");
     });
 
-    $("#new_project").click(function () {
-        location.replace("/project/add");
-    });
+
 
     $("#list_of_project").click(function () {
         location.replace("/project");
     });
 
-    $("#cancel_button").click(function () {
-        location.replace("/project");
-    });
 
     $("#add_button").click(function () {
         var name = $("#project_name").val();
